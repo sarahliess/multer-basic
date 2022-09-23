@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>File Upload Exercise</title>
+    <link rel="stylesheet" href="app.css" />
+  </head>
+  <body>
+    <!-- "action" verweist auf unsere post-route, enctype brauchen wir damit Multer weiß, dass es sich um Multiplattform data handelt-->
+    <form method="POST" action="/upload-one-pic" enctype="multipart/form-data">
+      <div>
+        <label>Select your image:</label>
+        <!--name muss gleich sein mit dem Namen, den wir in unserer single Methode spezifizieren-->
+        <input type="file" name="picture" />
+      </div>
+      <div>
+        <input type="submit" value="Upload" />
+      </div>
+    </form>
+  </body>
+</html>
